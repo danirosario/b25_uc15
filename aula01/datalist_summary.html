@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>datalist e summary</title>
 </head>
+
 <body>
-     <h2> Datalist </h2>
+    <h2> Datalist </h2>
     <form action="">
         <input list="carros" placeholder="escolha um carro">
         <!--Cria um campo de entrada de texto onde o usuário pode digitar ou escolher uma opção da lista-->
@@ -17,5 +19,24 @@
             <option value="fusca"></option>
         </datalist>
     </form>
+
+    <hr>
+    <h2> Details e Summary </h2>
+    <!-- Summary exibe um resumo de informações que podem ser expandidas  -->
+    <details>
+        <summary>Motor 1.6</summary>
+        <p>O motor 1.6 é um motor de alta performance, ideal para uso em veículos esportivos.</p>
+    </details>
+
+    <details open>
+        <summary>Conforto</summary>
+        <p>Carro com alto nível de conforto.</p>
+    </details>
+
+    <details>
+        <summary>Segurança</summary>
+        <p>Carro com alto nível de segurança.</p>
+    </details>
 </body>
+
 </html>
