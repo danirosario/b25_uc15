@@ -18,7 +18,82 @@
 
     <h1>Trabalhando com Formulários</h1>
 
+    <form action="" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Digite o Nome"><br>
+
+        <label for="sobrenome">Sobrenome:</label>
+        <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite o Sobrenome"><br><br>
+
+        <!-- Tipo radio -->
+        <label for="">
+            <strong>Qual seu nivel como programador:</strong><br>
+        </label> <br>
+
+        <label for="nivel1">
+            <input type="radio" id="nivel1" name="nivel" value="iniciante" checked> Iniciante
+        </label>
+        <label for="nivel2">
+            <input type="radio" id="nivel2" name="nivel" value="intermediario"> Intermediário
+        </label>
+        <label for="nivel3">
+            <input type="radio" id="nivel3" name="nivel" value="avancado"> Avançado
+        </label>
+        <br>
+
+        <br>
+        <button type="submit">Enviar</button><br><br>
+
+    </form>
 
 </body>
+
+<!-- Estilo CSS para o formulário -->
+
+<style>
+    form {
+        width: 300px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"] {
+        width: 90%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    input[type="radio"] {
+        margin-right: 2px;
+    }
+
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+</style>
 
 </html>
