@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -28,7 +29,7 @@
         <!-- Tipo radio -->
         <label for="">
             <strong>Qual seu nivel como programador:</strong><br>
-        </label>
+        </label><br>
 
         <label for="nivelIniciante">
             <input type="radio" id="nivelIniciante" name="nivel" value="iniciante" checked> Iniciante
@@ -39,20 +40,38 @@
         <label for="nivelAvancado">
             <input type="radio" id="nivelAvancado" name="nivel" value="avancado"> Avançado
         </label>
-        <br>
+        <br><br>
 
         <!-- Select -->
 
         <label for="">
             <strong>Escolaridade</strong><br>
-        </label>
+        </label><br>
 
         <select id="escolaridade" name="escolaridade">
+            <option selected disabled value="">Selecione...</option>
             <option value="basico">Ensino Básico</option>
             <option value="medio">Ensino Médio</option>
             <option value="superior">Ensino Superior</option>
             <option value="posGraduacao">Pós-Graduação</option>
         </select>
+
+        <label for="">
+            <strong>Selecione as tecnologias que você conhece</strong><br>
+        </label><br>
+
+        <input type="checkbox" id="html" name="tecnologia" value="html">
+        <label for="html">HTML</label>
+
+        <input type="checkbox" id="css" name="tecnologia" value="css">
+        <label for="css">CSS</label>
+
+        <input type="checkbox" id="javascript" name="tecnologia" value="javascript">
+        <label for="javascript">JavaScript</label>
+
+        <input type="checkbox" id="php" name="tecnologia" value="php">
+        <label for="php">PHP</label>
+
 
         <!-- Botão de envio -->
         <br><br>
@@ -62,61 +81,5 @@
     </form>
 
 </body>
-
-<!-- Estilo CSS para o formulário -->
-
-<style>
-    form {
-        width: 400px;
-        margin: 0 auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #f9f9f9;
-    }
-
-    label {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    input[type="text"] {
-        width: 90%;
-        padding: 8px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    input[type="radio"] {
-        margin-right: 2px;
-    }
-
-    select {
-        width: 90%;
-        padding: 8px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-    }
-
-    button {
-        background-color: #4CAF50;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #45a049;
-    }
-
-    h1 {
-        text-align: center;
-        color: #333;
-    }
-</style>
 
 </html>
