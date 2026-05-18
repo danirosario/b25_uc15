@@ -28,21 +28,36 @@
         <!-- Tipo radio -->
         <label for="">
             <strong>Qual seu nivel como programador:</strong><br>
-        </label> <br>
+        </label>
 
-        <label for="nivel1">
-            <input type="radio" id="nivel1" name="nivel" value="iniciante" checked> Iniciante
+        <label for="nivelIniciante">
+            <input type="radio" id="nivelIniciante" name="nivel" value="iniciante" checked> Iniciante
         </label>
-        <label for="nivel2">
-            <input type="radio" id="nivel2" name="nivel" value="intermediario"> Intermediário
+        <label for="nivelIntermediario">
+            <input type="radio" id="nivelIntermediario" name="nivel" value="intermediario"> Intermediário
         </label>
-        <label for="nivel3">
-            <input type="radio" id="nivel3" name="nivel" value="avancado"> Avançado
+        <label for="nivelAvancado">
+            <input type="radio" id="nivelAvancado" name="nivel" value="avancado"> Avançado
         </label>
         <br>
 
-        <br>
+        <!-- Select -->
+
+        <label for="">
+            <strong>Escolaridade</strong><br>
+        </label>
+
+        <select id="escolaridade" name="escolaridade">
+            <option value="basico">Ensino Básico</option>
+            <option value="medio">Ensino Médio</option>
+            <option value="superior">Ensino Superior</option>
+            <option value="posGraduacao">Pós-Graduação</option>
+        </select>
+
+        <!-- Botão de envio -->
+        <br><br>
         <button type="submit">Enviar</button><br><br>
+
 
     </form>
 
@@ -52,7 +67,7 @@
 
 <style>
     form {
-        width: 300px;
+        width: 400px;
         margin: 0 auto;
         padding: 20px;
         border: 1px solid #ccc;
@@ -75,6 +90,14 @@
 
     input[type="radio"] {
         margin-right: 2px;
+    }
+
+    select {
+        width: 90%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
     }
 
     button {
