@@ -5,7 +5,7 @@ body {
     padding: 20px;
 }
 
-aside {
+.redes-sociais {
     background-color: #fff;
     padding: 15px;
     border-radius: 5px;
@@ -17,19 +17,19 @@ h1 {
     color: #333;
 }
 
-h2 {
+.redes-sociais h2 {
     color: #555;
 }
 
-a {
+.redes-sociais a {
     color: #007BFF;
     text-decoration: none;
 }
 
-a:hover {
+.redes-sociais a:hover {
     text-decoration: underline;
 }
 
-li {
+.redes-sociais li {
     margin-bottom: 10px;
 }
