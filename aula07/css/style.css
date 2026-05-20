@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
-    margin: 0;
+    margin: 0 95px;
     padding: 20px;
 }
 
@@ -15,10 +15,25 @@ body {
 
 h1 {
     color: #333;
+    text-align: center;
 }
 
 .redes-sociais h2 {
     color: #555;
+    text-align: center;
+}
+
+.redes-sociais ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.redes-sociais li {
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .redes-sociais a {
@@ -28,8 +43,4 @@ h1 {
 
 .redes-sociais a:hover {
     text-decoration: underline;
-}
-
-.redes-sociais li {
-    margin-bottom: 10px;
 }
