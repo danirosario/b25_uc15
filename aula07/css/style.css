@@ -37,10 +37,12 @@ h1 {
 }
 
 .redes-sociais a {
-    color: #007BFF;
+    color: #007bff;
     text-decoration: none;
 }
 
 .redes-sociais a:hover {
     text-decoration: underline;
+    font-size: 18px;
+    color: rgb(161, 26, 26);
 }
