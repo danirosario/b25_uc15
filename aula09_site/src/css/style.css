@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Estilos para o header e nav */
+
+header {
+    background-color: #546cbb;
+    color: white;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* cria espaçamento entre os elementos */
+    align-items: center; /* alinha os elementos verticalmente */
+    max-width: 1200px;
+    margin: 0 auto; /* centraliza o nav */
+    padding: 0 20px; /* adiciona um pouco de padding nas laterais */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.nav-logo {
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px; /* adiciona espaçamento entre os links */
+}
+
+/* Estilos para o main */
+
+main {
+    max-width: 1200px;
+    margin: 20px auto; /* centraliza o main e adiciona margem superior */
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main h1 {
+    margin-bottom: 20px;
+    color: #546cbb;
+}
+
+main p {
+    line-height: 1.6; /* aumenta o espaçamento entre as linhas para melhor leitura */
+    margin-bottom: 20px; /* adiciona margem inferior para separar os parágrafos */
+}
+
+/* Estilos para o footer */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px; /* adiciona margem superior para separar do main */
+}
+
+footer p {
+    margin: 0; /* remove a margem padrão do parágrafo */
+}
+
