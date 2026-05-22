@@ -63,6 +63,14 @@ main h1 {
 main p {
     line-height: 1.6; /* aumenta o espaçamento entre as linhas para melhor leitura */
     margin-bottom: 20px; /* adiciona margem inferior para separar os parágrafos */
+    text-decoration: none; /* adiciona uma linha tracejada para separar os parágrafos */
+}
+
+/* Estilos para a seção de contato */
+
+div.contact-info {
+    display: flex;
+    gap: 20px; /* adiciona espaçamento entre os links */
 }
 
 /* Estilos para o footer */
@@ -73,6 +81,8 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 20px; /* adiciona margem superior para separar do main */
+    position: relative; /* necessário para posicionar os ícones de forma absoluta dentro do footer */
+    margin-bottom: 0; /* remove a margem inferior do footer */
 }
 
 footer p {
