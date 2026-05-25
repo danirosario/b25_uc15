@@ -70,8 +70,13 @@ main p {
 /* Estilos para a seção de contato */
 
 div.contact-info {
-    display: flex;
+    display: flex; /* Coloca os itens de contato (como os links dos ícones) lado a lado */
     gap: 20px; /* adiciona espaçamento entre os links */
+}
+
+.contact-info a {
+    display: inline-block; /* Permite que o link aceite animações e transformações de tamanho */
+    text-decoration: none;
 }
 
 /* Estilos para o footer */
