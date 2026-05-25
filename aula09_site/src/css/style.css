@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -13,7 +14,7 @@ body {
 /* Estilos para o header e nav */
 
 header {
-    background-color: #546cbb;
+    background-color: #065275;
     color: white;
     padding: 20px;
 }
@@ -34,8 +35,8 @@ nav a {
 }
 
 .nav-logo {
-    font-weight: bold;
-    font-size: 24px;
+    width: 100px;
+    height: auto;
 }
 
 .nav-links {
@@ -86,6 +87,20 @@ footer {
 }
 
 footer p {
-    margin: 0; /* remove a margem padrão do parágrafo */
+    margin: 10px; /* remove a margem padrão do parágrafo */
 }
 
+.botao-retornar {
+    display: inline-block; /* posicionar elementos lado a lado (como um texto), mas permitindo que você ajuste o tamanho e o espaçamento deles (como uma caixa). */
+    margin: 15px;
+    padding: 10px 20px;
+    background-color: #414141;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.botao-retornar :hover {
+    background-color: #252525;
+}
