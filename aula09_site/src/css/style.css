@@ -11,8 +11,7 @@ body {
     color: #333;
 }
 
-/* Estilos para o header e nav */
-
+/* ESTILOS PARA A NAV E HEADER */
 header {
     background-color: #065275;
     color: white;
@@ -21,15 +20,11 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between;
-    /* cria espaçamento entre os elementos */
-    align-items: center;
-    /* alinha os elementos verticalmente */
+    justify-content: space-between; /* cria espaçamento entre os elementos */
+    align-items: center;            /* alinha os elementos verticalmente */
     max-width: 1200px;
-    margin: 0 auto;
-    /* centraliza o nav */
-    padding: 0 20px;
-    /* adiciona um pouco de padding nas laterais */
+    margin: 0 auto;                 /* centraliza o nav */
+    padding: 0 20px;                /* adiciona um pouco de padding nas laterais */
 }
 
 nav a {
@@ -53,12 +48,10 @@ nav a:hover {
     gap: 30px; /* adiciona espaçamento entre os links */
 }
 
-/* Estilos para o main */
-
+/* ESTILOS PARA A MAIN */
 main {
     max-width: 1200px;
-    margin: 20px auto;
-    /* centraliza o main e adiciona margem superior */
+    margin: 20px auto;  /* centraliza o main e adiciona margem superior */
     /*
     padding: 20px;
     background-color: white;
@@ -77,16 +70,16 @@ main h2 {
 }
 
 main p {
-    line-height: 1.6; /* aumenta o espaçamento entre as linhas para melhor leitura */
-    margin-bottom: 20px; /* adiciona margem inferior para separar os parágrafos */
+    line-height: 1.6;      /* aumenta o espaçamento entre as linhas para melhor leitura */
+    margin-bottom: 20px;   /* adiciona margem inferior para separar os parágrafos */
     text-decoration: none; /* adiciona uma linha tracejada para separar os parágrafos */
 }
 
-/* banner */
+/* BANNER */
 #banner {
     width: 100%;
     height: 400px;
-    overflow: hidden; /* O overflow é para esconder o conteúdo que passa do limite da caixa */ 
+    overflow: hidden;  /* O overflow é para esconder o conteúdo que passa do limite da caixa */ 
     margin-bottom: 20px;
 }
 
@@ -116,46 +109,36 @@ main p {
     font-size: 24px;
 }
 
-/* Estilos para a seção de contato */
-
-
+/* CONTATO */
 
 div.contact-info {
-    display: flex;
-    /* Coloca os itens de contato (como os links dos ícones) lado a lado */
-    gap: 20px;
-    /* adiciona espaçamento entre os links */
+    display: flex; /* Coloca os itens de contato (como os links dos ícones) lado a lado */
+    gap: 20px;     /* adiciona espaçamento entre os links */
 }
 
 .contact-info a {
-    display: inline-block;
-    /* Permite que o link aceite animações e transformações de tamanho */
+    display: inline-block;  /* Permite que o link aceite animações e transformações de tamanho */
     text-decoration: none;
 }
 
-/* Estilos para o footer */
+/* ESTILO PARA O FOOTER */
 
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 20px;
-    /* adiciona margem superior para separar do main */
-    position: relative;
-    /* necessário para posicionar os ícones de forma absoluta dentro do footer */
-    margin-bottom: 0;
-    /* remove a margem inferior do footer */
+    margin-top: 20px;   /* adiciona margem superior para separar do main */
+    position: relative; /* necessário para posicionar os ícones de forma absoluta dentro do footer */
+    margin-bottom: 0;   /* remove a margem inferior do footer */
 }
 
 footer p {
-    margin: 10px;
-    /* remove a margem padrão do parágrafo */
+    margin: 10px;  /* remove a margem padrão do parágrafo */
 }
 
 .botao-retornar {
-    display: inline-block;
-    /* posicionar elementos lado a lado (como um texto), mas permitindo que você ajuste o tamanho e o espaçamento deles (como uma caixa). */
+    display: inline-block;  /* posicionar elementos lado a lado (como um texto), mas permitindo que você ajuste o tamanho e o espaçamento deles (como uma caixa). */
     margin: 15px;
     padding: 10px 20px;
     background-color: #414141;
