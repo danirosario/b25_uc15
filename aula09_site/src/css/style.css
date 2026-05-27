@@ -14,8 +14,14 @@ body {
 /* ESTILOS PARA A NAV E HEADER */
 header {
     background-color: #065275;
+    position: sticky; 
     color: white;
-    padding: 20px;
+    position: sticky;
+    z-index: 1000; /* Garante que fique por cima do resto do conteúdo */
+}
+
+.navbar {
+    width: 100%;
 }
 
 nav {
@@ -24,7 +30,8 @@ nav {
     align-items: center;            /* alinha os elementos verticalmente */
     max-width: 1200px;
     margin: 0 auto;                 /* centraliza o nav */
-    padding: 0 20px;                /* adiciona um pouco de padding nas laterais */
+    padding: 0 10px;                /* adiciona um pouco de padding nas laterais */
+
 }
 
 nav a {
@@ -75,6 +82,28 @@ main p {
     text-decoration: none; /* adiciona uma linha tracejada para separar os parágrafos */
 }
 
+/* SOBRE */
+#sobre {
+    display: flex;
+    width: 100%;
+}
+
+.sobre-content p {
+    align-items: left;
+    justify-content: left;
+    width: 70%;
+}
+
+.img-foto-pc {
+    display: flex;
+    align-items: center;
+}
+
+.img-foto-pc img {
+    border-radius: 9px;
+    width: 400px;
+}
+
 /* BANNER */
 #banner {
     width: 100%;
@@ -107,8 +136,21 @@ main p {
     padding: 8px;
     margin-left: 12px;
     font-size: 24px;
+    margin-top: -30px;
 }
 
+#button-projetos {
+    padding: 10px;
+    margin-left: 20px;
+    color: #fff;
+    background-color: #065275;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#button-projetos:hover {
+    background-color: #096894;
+}
 /* CONTATO */
 
 div.contact-info {
@@ -128,7 +170,6 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    margin-top: 20px;   /* adiciona margem superior para separar do main */
     position: relative; /* necessário para posicionar os ícones de forma absoluta dentro do footer */
     margin-bottom: 0;   /* remove a margem inferior do footer */
 }
@@ -139,15 +180,50 @@ footer p {
 
 .botao-retornar {
     display: inline-block;  /* posicionar elementos lado a lado (como um texto), mas permitindo que você ajuste o tamanho e o espaçamento deles (como uma caixa). */
-    margin: 15px;
     padding: 10px 20px;
-    background-color: #414141;
+    background-color: #3f3f3f;
     color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
 }
 
-.botao-retornar :hover {
-    background-color: #252525;
+.botao-retornar:hover {
+    background-color: #585858;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    /* Menu vira vertical e centraliza */
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Reduz o tamanho dos textos do Banner */
+    #banner h1 {
+        font-size: 1.8rem;
+    }
+
+    /* Seção Sobre Mim: Empilha a foto embaixo do texto */
+    #sobre {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .img-foto-pc {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    /* Centraliza os ícones de contato */
+    .contact-info {
+        justify-content: center;
+    }
 }
