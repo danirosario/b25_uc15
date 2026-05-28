@@ -15,8 +15,8 @@ body {
 header {
     background-color: #065275;
     position: sticky; 
+    top: 0;       
     color: white;
-    position: sticky;
     z-index: 1000; /* Garante que fique por cima do resto do conteúdo */
 }
 
