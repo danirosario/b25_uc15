@@ -5,6 +5,21 @@
     scroll-behavior: smooth;
 }
 
+html {
+    /* A primeira cor é o "thumb" (o botão de arrastar) */
+    /* A segunda cor é a "track" (o trilho/fundo) */
+    scrollbar-color: #065275 #f1f1f1;
+}
+
+/* Altera a seleção de todo o site */
+::selection {
+    background-color: #096894;
+    /* Cor de fundo da seleção */
+    color: #fff;
+    /* Cor do texto selecionado */
+}
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f0f0f0;
@@ -14,10 +29,11 @@ body {
 /* ESTILOS PARA A NAV E HEADER */
 header {
     background-color: #065275;
-    position: sticky; 
-    top: 0;       
+    position: sticky;
+    top: 0;
     color: white;
-    z-index: 1000; /* Garante que fique por cima do resto do conteúdo */
+    z-index: 1000;
+    /* Garante que fique por cima do resto do conteúdo */
 }
 
 .navbar {
@@ -26,11 +42,15 @@ header {
 
 nav {
     display: flex;
-    justify-content: space-between; /* cria espaçamento entre os elementos */
-    align-items: center;            /* alinha os elementos verticalmente */
+    justify-content: space-between;
+    /* cria espaçamento entre os elementos */
+    align-items: center;
+    /* alinha os elementos verticalmente */
     max-width: 1200px;
-    margin: 0 auto;                 /* centraliza o nav */
-    padding: 0 10px;                /* adiciona um pouco de padding nas laterais */
+    margin: 0 auto;
+    /* centraliza o nav */
+    padding: 0 10px;
+    /* adiciona um pouco de padding nas laterais */
 
 }
 
@@ -52,13 +72,15 @@ nav a:hover {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 30px; /* adiciona espaçamento entre os links */
+    gap: 30px;
+    /* adiciona espaçamento entre os links */
 }
 
 /* ESTILOS PARA A MAIN */
 main {
     max-width: 1200px;
-    margin: 20px auto;  /* centraliza o main e adiciona margem superior */
+    margin: 20px auto;
+    /* centraliza o main e adiciona margem superior */
     /*
     padding: 20px;
     background-color: white;
@@ -77,9 +99,12 @@ main h2 {
 }
 
 main p {
-    line-height: 1.6;      /* aumenta o espaçamento entre as linhas para melhor leitura */
-    margin-bottom: 20px;   /* adiciona margem inferior para separar os parágrafos */
-    text-decoration: none; /* adiciona uma linha tracejada para separar os parágrafos */
+    line-height: 1.6;
+    /* aumenta o espaçamento entre as linhas para melhor leitura */
+    margin-bottom: 20px;
+    /* adiciona margem inferior para separar os parágrafos */
+    text-decoration: none;
+    /* adiciona uma linha tracejada para separar os parágrafos */
 }
 
 /* SOBRE */
@@ -104,11 +129,32 @@ main p {
     width: 400px;
 }
 
+/* PROJETOS */
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+    gap: 15px;
+}
+
+.projetos img {
+    width: 100%;       /* Faz a imagem respeitar a largura do card */
+    height: 300px;    
+    object-fit: cover; /* Corta a imagem proporcionalmente sem distorcer */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: block;    /* Remove espaços em branco indesejados abaixo da imagem */
+}
+
+.projetos img:hover {
+    transform: scale(1.05); 
+}
+
 /* BANNER */
 #banner {
     width: 100%;
     height: 400px;
-    overflow: hidden;  /* O overflow é para esconder o conteúdo que passa do limite da caixa */ 
+    overflow: hidden;/* O overflow é para esconder o conteúdo que passa do limite da caixa */
     margin-bottom: 20px;
 }
 
@@ -116,13 +162,18 @@ main p {
     width: 100%;
     height: 100%;
     background-image: url('../img/tech-background.jpg');
-    background-size: cover;      /* Redimensiona a imagem para cobrir todo o espaço, sem distorce */
-    background-position: center; /* Centraliza a imagem horizontalmente e verticalmente no container  */
+    background-size: cover;
+    /* Redimensiona a imagem para cobrir todo o espaço, sem distorce */
+    background-position: center;
+    /* Centraliza a imagem horizontalmente e verticalmente no container  */
     display: flex;
-    flex-direction: column;     /* Empilha o h1 e o p verticalmente */
-    justify-content: center;    /* Centraliza os textos verticalmente no banner */
-    align-items: flex-start;    /* Alinha os textos à esquerda */
-    padding-left: 20px;         
+    flex-direction: column;
+    /* Empilha o h1 e o p verticalmente */
+    justify-content: center;
+    /* Centraliza os textos verticalmente no banner */
+    align-items: flex-start;
+    /* Alinha os textos à esquerda */
+    padding-left: 20px;
 }
 
 .banner-img h1 {
@@ -151,15 +202,19 @@ main p {
 #button-projetos:hover {
     background-color: #096894;
 }
+
 /* CONTATO */
 
 div.contact-info {
-    display: flex; /* Coloca os itens de contato (como os links dos ícones) lado a lado */
-    gap: 20px;     /* adiciona espaçamento entre os links */
+    display: flex;
+    /* Coloca os itens de contato (como os links dos ícones) lado a lado */
+    gap: 20px;
+    /* adiciona espaçamento entre os links */
 }
 
 .contact-info a {
-    display: inline-block;  /* Permite que o link aceite animações e transformações de tamanho */
+    display: inline-block;
+    /* Permite que o link aceite animações e transformações de tamanho */
     text-decoration: none;
 }
 
@@ -170,16 +225,20 @@ footer {
     color: white;
     text-align: center;
     padding: 20px;
-    position: relative; /* necessário para posicionar os ícones de forma absoluta dentro do footer */
-    margin-bottom: 0;   /* remove a margem inferior do footer */
+    position: relative;
+    /* necessário para posicionar os ícones de forma absoluta dentro do footer */
+    margin-bottom: 0;
+    /* remove a margem inferior do footer */
 }
 
 footer p {
-    margin: 10px;  /* remove a margem padrão do parágrafo */
+    margin: 10px;
+    /* remove a margem padrão do parágrafo */
 }
 
 .botao-retornar {
-    display: inline-block;  /* posicionar elementos lado a lado (como um texto), mas permitindo que você ajuste o tamanho e o espaçamento deles (como uma caixa). */
+    display: inline-block;
+    /* posicionar elementos lado a lado (como um texto), mas permitindo que você ajuste o tamanho e o espaçamento deles (como uma caixa). */
     padding: 10px 20px;
     background-color: #3f3f3f;
     color: #ffffff;
@@ -194,6 +253,7 @@ footer p {
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
+
     /* Menu vira vertical e centraliza */
     nav {
         flex-direction: column;
