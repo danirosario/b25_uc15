@@ -1,355 +1,439 @@
+/* =========================
+   RESET E CONFIGURAÇÕES GLOBAIS
+========================= */
+
+/* Remove margens, paddings padrão e ajusta modelo de caixa */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+    margin: 0; /* remove espaço externo padrão */
+    padding: 0; /* remove espaço interno padrão */
+    box-sizing: border-box; /* inclui padding e borda no tamanho total */
+    scroll-behavior: smooth; /* rolagem suave ao clicar em âncoras */
 }
 
+/* Garante ocupação total da tela */
 html, body {
-    width: 100%;
-    height: 100%;
+    width: 100%; /* largura total */
+    height: 100%; /* altura total */
 }
 
+/* Estilo base do site */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
+    font-family: Arial, Helvetica, sans-serif; /* fonte padrão */
+    background-color: #f0f0f0; /* fundo cinza claro */
+    color: #333; /* cor padrão do texto */
 }
 
+/* Personalização da barra de rolagem (Firefox) */
 html {
-    scrollbar-color: #065275 #f1f1f1;
+    scrollbar-color: #065275 #f1f1f1; /* cor do indicador e trilho */
 }
 
-/* Altera a seleção de todo o site */
+/* Estilo ao selecionar texto */
 ::selection {
-    background-color: #096894;
-    color: #fff;
+    background-color: #096894; /* fundo da seleção */
+    color: #fff; /* cor do texto selecionado */
 }
 
-/* CONTAINERS */
-/* Mantém o conteúdo centralizado em telas grandes e evita colar nas bordas em telas pequenas */
+/* =========================
+   CONTAINERS
+========================= */
+
+/* Container da seção SOBRE */
 .container-interno-sobre {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 40px;
-    padding: 0 20px;
+    width: 100%; /* ocupa toda largura */
+    max-width: 1200px; /* limita largura máxima */
+    display: flex; /* ativa flexbox */
+    justify-content: space-between; /* separa texto e imagem */
+    align-items: center; /* centraliza verticalmente */
+    gap: 40px; /* espaço entre elementos */
+    padding: 0 20px; /* respiro lateral */
 }
 
+/* Container da seção PROJETOS */
 .container-interno-projetos {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 20px;
+    width: 100%; /* largura total */
+    max-width: 1200px; /* limite de largura */
+    display: flex; /* flexbox */
+    flex-direction: column; /* empilha itens */
+    align-items: center; /* centraliza horizontalmente */
+    padding: 0 20px; /* respiro lateral */
 }
 
+/* Container da seção CONTATO */
 .container-interno-contato {
-    width: 100%;
-    max-width: 1200px;
-    text-align: center;
-    padding: 0 20px;
+    width: 100%; /* largura total */
+    max-width: 1200px; /* limite de largura */
+    text-align: center; /* centraliza texto */
+    padding: 0 20px; /* respiro lateral */
 }
 
-/* NAV E HEADER  */
+/* =========================
+   NAV E HEADER
+========================= */
+
+/* Cabeçalho fixo no topo */
 header {
-    background-color: #065275;
-    position: fixed;         /* Mantém a barra fixa ao rolar */
-    top: 0;                  /* Alinha exatamente no topo da tela */
-    width: 100%;             /* Garante que ela ocupe toda a largura */
-    color: white;
-    z-index: 9999;           /* impede que imagens ou fundos passem por cima */
+    background-color: #065275; /* cor azul escura */
+    position: fixed; /* fixa no topo */
+    top: 0; /* encosta no topo */
+    width: 100%; /* ocupa toda largura */
+    color: white; /* texto branco */
+    z-index: 9999; /* fica acima de tudo */
 }
 
-
+/* Navbar principal */
 .navbar {
-    width: 100%;
+    width: 100%; /* largura total */
 }
 
+/* Estrutura do menu */
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 10px;
+    display: flex; /* ativa flexbox */
+    justify-content: space-between; /* separa logo e menu */
+    align-items: center; /* centraliza verticalmente */
+    max-width: 1200px; /* limita largura */
+    margin: 0 auto; /* centraliza na tela */
+    padding: 0 10px; /* respiro lateral */
 }
 
+/* Links do menu */
 nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
+    color: white; /* cor branca */
+    text-decoration: none; /* remove sublinhado */
+    font-size: 18px; /* tamanho do texto */
 }
 
+/* Hover dos links */
 nav a:hover {
-    color: #c6d5ff;
+    color: #c6d5ff; /* cor ao passar mouse */
 }
 
+/* Logo do site */
 .nav-logo {
-    width: 100px;
-    height: auto;
+    width: 100px; /* largura fixa */
+    height: auto; /* mantém proporção */
 }
 
+/* Lista do menu */
 .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
+    list-style: none; /* remove bolinhas */
+    display: flex; /* itens lado a lado */
+    gap: 30px; /* espaço entre links */
 }
 
-/* MAIN E TEXTOS GERAIS */
-/* main {
-    max-width: 1200px;
-    height: 40vh;
-    margin: 20px auto;
-    padding: 0 20px;
-} */
+/* =========================
+   TEXTOS GERAIS
+========================= */
 
-/* main h1 {
-    margin-bottom: 20px;
-    color: #065275;
-} */
-
-main h2, #sobre h2, #projetos h2, #contato h2 { /* Estilo para os títulos das seções */
-    margin-bottom: 18px;
+/* Títulos principais */
+main h2, #sobre h2, #projetos h2, #contato h2 {
+    margin-bottom: 18px; /* espaço abaixo do título */
 }
 
+/* Parágrafos gerais */
 main p, #sobre p, #projetos p, #contato p {
-    line-height: 1.6; /* Melhora a legibilidade do texto */
-    margin-bottom: 20px;
+    line-height: 1.6; /* melhora leitura */
+    margin-bottom: 20px; /* espaço entre parágrafos */
 }
 
-/* BANNER */
+/* =========================
+   BANNER (HERO)
+========================= */
+
+/* Seção principal */
 #banner {
-    width: 100%;
-    height: 100vh; /* Ocupa 100% da altura da tela */
-    overflow: hidden;
-    margin-bottom: 100px;
+    width: 100%; /* largura total */
+    height: 100vh; /* altura da tela inteira */
+    overflow: hidden; /* evita vazamento */
+    margin-bottom: 100px; /* espaço abaixo */
 }
 
+/* Conteúdo do banner */
 .banner-img {
-    display: flex;
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: flex-start; 
-    padding: 20px;
-    height: 100%;            /* Força a div a ocupar toda a altura do #banner */
-    box-sizing: border-box;  /* Garante que o padding não quebre o layout */
-    background-image: url('../img/tech-background.jpg');
-    background-size: cover;
-    background-position: center; 
+    display: flex; /* flexbox */
+    flex-direction: column; /* empilha itens */
+    justify-content: center; /* centraliza vertical */
+    align-items: flex-start; /* alinhado à esquerda */
+    padding: 20px; /* respiro interno */
+    height: 100%; /* ocupa altura total */
+    box-sizing: border-box; /* inclui padding no cálculo */
+    background-image: url('../img/tech-background.jpg'); /* imagem fundo */
+    background-size: cover; /* cobre toda área */
+    background-position: center; /* centraliza imagem */
+    margin-top: 50px; /* evita sobreposição do header */
 }
 
-.banner-img h1, .banner-img p, #button-projetos {
-    margin-left: 100px; /* Alinha todos os textos e botões na mesma linha vertical */
-}
-
-.banner-img h1 {
-    color: #ffffff;
-    font-size: 48px;
-    margin-top: 0;
-    margin-bottom: 10px; /* Espaço entre o título e o parágrafo */
-}
-
-.banner-img p {
-    color: #ffffff;
-    font-size: 24px;
-    margin-top: 0;
-    margin-bottom: 30px; /* Espaço entre o parágrafo e o botão */
-}
-
+/* Alinhamento dos elementos do banner */
+.banner-img h1,
+.banner-img p,
 #button-projetos {
-    padding: 15px 30px; 
-    color: #fff;
-    background-color: #065275;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
+    margin-left: 100px; /* alinhamento horizontal */
 }
 
+/* Título do banner */
+.banner-img h1 {
+    color: #ffffff; /* texto branco */
+    font-size: 48px; /* tamanho grande */
+    margin-bottom: 10px; /* espaço abaixo */
+}
+
+/* Texto do banner */
+.banner-img p {
+    color: #ffffff; /* branco */
+    font-size: 24px; /* tamanho médio */
+    margin-bottom: 30px; /* espaço abaixo */
+}
+
+/* Botão do banner */
+#button-projetos {
+    padding: 15px 30px; /* tamanho interno */
+    color: #fff; /* texto branco */
+    background-color: #065275; /* azul escuro */
+    border-radius: 8px; /* bordas arredondadas */
+    cursor: pointer; /* cursor clicável */
+    border: none; /* remove borda padrão */
+}
+
+/* Hover do botão */
 #button-projetos:hover {
-    background-color: #096894;
+    background-color: #096894; /* azul mais claro */
 }
 
+/* =========================
+   SOBRE MIM
+========================= */
 
-/* SOBRE MIM  */
 #sobre {
-    display: flex;
-    width: 100%;
-    min-height: 100vh;
-    justify-content: center; 
-    align-items: center;
-    background-color: #cfcfcf;
+    display: flex; /* flexbox */
+    width: 100%; /* largura total */
+    min-height: 100vh; /* altura total da tela */
+    justify-content: center; /* centraliza horizontal */
+    align-items: center; /* centraliza vertical */
+    background-color: #cfcfcf; /* fundo cinza */
 }
 
+/* Texto sobre */
 .sobre-content p {
-    text-align: left; 
-    width: 100%;
+    text-align: left; /* alinhado à esquerda */
+    width: 100%; /* largura total */
 }
 
+/* Container da imagem */
 .img-foto-pc {
-    display: flex;
-    align-items: center;
+    display: flex; /* flexbox */
+    align-items: center; /* centraliza vertical */
 }
 
+/* Imagem sobre */
 .img-foto-pc img {
-    border-radius: 9px;
-    width: 400px;
-    height: auto;
+    border-radius: 9px; /* bordas arredondadas */
+    width: 400px; /* tamanho fixo */
+    height: auto; /* mantém proporção */
 }
 
-/*  SEÇÃO: PROJETOS */
+/* =========================
+   PROJETOS
+========================= */
+
 #projetos {
-    display: flex;       
-    width: 100%;
-    min-height: 100vh;  
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f0f0; 
+    display: flex; /* flexbox */
+    width: 100%; /* largura total */
+    min-height: 100vh; /* tela cheia */
+    justify-content: center; /* centraliza */
+    align-items: center; /* centraliza */
+    background-color: #f0f0f0; /* fundo claro */
 }
 
+/* Grid de projetos */
 .project-list {
-    display: grid;     
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Garante que cada projeto tenha no mínimo 300px e se ajuste ao espaço disponível */
-    gap: 20px;         
-    width: 100%; 
-    margin-top: 20px;  
+    display: grid; /* layout em grade */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* responsivo automático */
+    gap: 20px; /* espaço entre itens */
+    width: 100%; /* largura total */
 }
 
+/* Imagens dos projetos */
 .projetos img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;                                  /* Garante que a imagem preencha o espaço sem distorcer, cortando o excesso se necessário */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, filter 0.3s ease;  /* Transição suave para o efeito de hover */
-    display: block;                                     /* Garante que a imagem seja tratada como um bloco para evitar problemas de layout */
-    filter: blur(0.6px) brightness(1.3) contrast(0.8);  /* Efeito de desfoque e realce para destacar as imagens */
+    width: 100%; /* ocupa largura do card */
+    height: 300px; /* altura fixa */
+    object-fit: cover; /* evita distorção */
+    border-radius: 8px; /* bordas suaves */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* sombra leve */
+    transition: transform 0.3s ease, filter 0.3s ease; /* animação suave */
+    display: block; /* evita espaços extras */
+    filter: blur(0.6px) brightness(1.3) contrast(0.8); /* efeito visual */
 }
 
+/* Hover dos projetos */
 .projetos img:hover {
-    transform: scale(1.03); /* Leve aumento de escala para dar destaque */
-    filter: none;
+    transform: scale(1.03); /* zoom leve */
+    filter: none; /* remove filtro */
 }
 
-/* SEÇÃO: CONTATO */
+/* =========================
+   CONTATO
+========================= */
+
 #contato {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 0;
-    background-color: #ffffff;
+    display: flex; /* flexbox */
+    width: 100%; /* largura total */
+    justify-content: center; /* centraliza */
+    align-items: center; /* centraliza */
+    padding: 80px 0; /* espaçamento vertical */
+    background-color: #ffffff; /* fundo branco */
 }
 
+/* Ícones de contato */
 div.contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
+    display: flex; /* flexbox */
+    justify-content: center; /* centraliza */
+    gap: 20px; /* espaço entre ícones */
+    margin-top: 20px; /* espaço acima */
 }
 
+/* Links do contato */
 .contact-info a {
-    display: inline-block;
-    text-decoration: none;
+    display: inline-block; /* permite tamanho e alinhamento */
+    text-decoration: none; /* remove sublinhado */
 }
 
-/*  ESTILO PARA O FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    background-color: #333;
-    color: white;
-    padding: 30px 20px;
-    width: 100%;
+    background-color: #333; /* fundo escuro */
+    color: white; /* texto branco */
+    padding: 30px 20px; /* espaçamento interno */
+    width: 100%; /* largura total */
 }
 
-footer > div { /* O div é necessário para agrupar o texto e o botão e aplicar o flexbox corretamente */
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;            /* Alinha os dois verticalmente no centro */
-    width: 100%;
+/* Container interno footer */
+footer > div {
+    max-width: 1200px; /* limite largura */
+    margin: 0 auto; /* centraliza */
+    display: flex; /* flexbox */
+    justify-content: space-between; /* separa elementos */
+    align-items: center; /* centraliza vertical */
 }
 
+/* Texto footer */
 footer p {
-    margin: 0;
-    text-align: left;    /* Garante o texto alinhado à esquerda */
+    margin: 0; /* remove margem */
 }
 
+/* Botão orçamento */
+.botao-orcamento {
+    display: flex; /* flexbox */
+    align-items: center; /* centraliza */
+    gap: 15px; /* espaço entre itens */
+}
+
+/* Botão voltar */
 .botao-retornar {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #3f3f3f;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 100%;    /* Deixa o botão circular */
-    font-weight: bold;
-    white-space: nowrap;    /* Impede o botão de quebrar em duas linhas */
+    display: flex; /* flexbox */
+    justify-content: center; /* centraliza */
+    align-items: center; /* centraliza */
+    width: 45px; /* largura */
+    height: 45px; /* altura */
+    background-color: #3f3f3f; /* cinza escuro */
+    color: #fff; /* branco */
+    text-decoration: none; /* remove sublinhado */
+    border-radius: 50%; /* círculo */
+    font-weight: bold; /* negrito */
 }
 
+/* Hover voltar */
 .botao-retornar:hover {
-    background-color: #585858;
+    background-color: #585858; /* mais claro */
 }
 
+/* Footer layout */
+.footer-content {
+    display: flex; /* flexbox */
+    flex-direction: column; /* empilha */
+    align-items: center; /* centraliza */
+    gap: 20px; /* espaço vertical */
+}
 
-/* RESPONSIVIDADE */
+/* Direitos reservados */
+.direitos-reservados {
+    display: flex; /* flexbox */
+    align-items: center; /* centraliza */
+    gap: 15px; /* espaço */
+}
+
+/* Botão orçamento */
+.botao-orcamento a {
+    display: inline-block; /* bloco inline */
+    padding: 10px 20px; /* tamanho */
+    background-color: #065275; /* azul */
+    color: #fff; /* branco */
+    text-decoration: none; /* remove linha */
+    border-radius: 8px; /* borda suave */
+    font-weight: bold; /* destaque */
+}
+
+/* Hover orçamento */
+.botao-orcamento a:hover {
+    background-color: #096894; /* azul claro */
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
 @media (max-width: 768px) {
-    /* Menu sanduíche/vertical */
+
     nav {
-        flex-direction: column;
-        gap: 15px;
-        padding: 15px 10px;
+        flex-direction: column; /* menu em coluna */
+        gap: 15px; /* espaço */
+        padding: 15px 10px; /* ajuste */
     }
 
     .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
+        gap: 15px; /* menos espaço */
+        flex-wrap: wrap; /* quebra linha */
+        justify-content: center; /* centraliza */
     }
 
-    /* Ajustes do Banner */
     #banner h1 {
-        font-size: 1.8rem;
+        font-size: 1.8rem; /* reduz título */
     }
 
-    /* Adaptação dos Containers de tela cheia */
     .container-interno-sobre {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* empilha */
+        text-align: center; /* centraliza */
     }
 
     .img-foto-pc {
-        width: 100%;
-        justify-content: center;
-        margin-top: 20px;
+        justify-content: center; /* centraliza imagem */
+        margin-top: 20px; /* espaço */
     }
 
     .img-foto-pc img {
-        width: 100%;
-        max-width: 350px;
+        width: 100%; /* responsivo */
+        max-width: 350px; /* limite */
     }
 }
+
 @media (max-width: 480px) {
-    /* Ajustes adicionais para telas muito pequenas */
+
     #banner h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* menor ainda */
     }
 
     .project-list {
-        grid-template-columns: 1fr; /* Exibe um projeto por linha */
+        grid-template-columns: 1fr; /* 1 coluna */
     }
 
     footer > div {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
-    
-    footer p {
-        text-align: center;
+        flex-direction: column; /* empilha footer */
+        gap: 15px; /* espaço */
+        text-align: center; /* centraliza */
     }
 
+    footer p {
+        text-align: center; /* centraliza texto */
+    }
 }
