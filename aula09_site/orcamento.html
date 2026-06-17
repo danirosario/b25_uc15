@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitar Orçamento</title>
+    <link rel="stylesheet" href="src/css/orcamento.css">
+</head>
+
+<body>
+
+    <div class="form-container"> <!-- Container principal do formulário -->
+
+        <h2>Solicite seu Orçamento</h2> <!-- Título do formulário -->
+
+        <form action="#" method="POST"> <!-- Formulário que envia dados via método POST -->
+
+            <div class="form-group"> <!-- Grupo do campo nome -->
+                <label for="nome">Nome Completo:</label> <!-- Label associada ao input pelo id "nome" -->
+                <input type="text" id="nome" name="nome" required> <!-- Campo de texto obrigatório para o nome -->
+            </div>
+
+            <div class="form-group"> <!-- Grupo do campo e-mail -->
+                <label for="email">E-mail:</label> <!-- Label do campo de e-mail -->
+                <input type="email" id="email" name="email" required> <!-- Campo de e-mail com validação automática -->
+            </div>
+
+            <div class="form-group"> <!-- Grupo da descrição do projeto -->
+                <label for="projeto">Descreva seu Projeto:</label> <!-- Label do textarea -->
+                <textarea id="projeto" name="projeto" rows="4" required></textarea>
+                <!-- Área de texto para descrição do projeto -->
+            </div>
+
+            <button type="submit">Enviar Orçamento</button> <!-- Botão que envia o formulário -->
+        </form>
+    </div>
+
+</body>
+
+</html>

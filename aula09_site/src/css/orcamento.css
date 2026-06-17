@@ -1,0 +1,47 @@
+body {
+    font-family: Arial, sans-serif; /* Define a fonte padrão da página */
+    background-color: #f4f4f4;    /* Define uma cor de fundo cinza claro para a página */
+    padding: 20px;                  /* Cria um espaçamento interno ao redor da página */
+}
+
+.form-container {
+    background: #fff;                        /* Define fundo branco para o formulário */
+    max-width: 500px;                          /* Limita a largura máxima do formulário */
+    margin: auto;                              /* Centraliza horizontalmente o formulário */
+    padding: 20px;                             /* Espaçamento interno dentro do container */
+    border-radius: 8px;                        /* Arredonda os cantos do container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve para destacar o formulário */
+}
+
+.form-group {
+    margin-bottom: 15px;         /* Espaçamento entre os grupos de campos */
+}
+
+label {
+    display: block;              /* Faz o label ocupar toda a linha */
+    margin-bottom: 5px;          /* Espaço entre o label e o campo */
+    font-weight: bold;           /* Deixa o texto do label em negrito */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;                 /* Faz os campos ocuparem toda a largura do container */
+    padding: 10px;               /* Espaçamento interno dentro dos campos */
+    border: 1px solid #ccc;    /* Borda cinza clara */
+    border-radius: 4px;          /* Bordas levemente arredondadas */
+    box-sizing: border-box;      /* Inclui padding e borda no cálculo da largura total */
+}
+
+button {
+    background-color: #28a745; /* Cor de fundo verde do botão */
+    color: white;              /* Cor do texto do botão */
+    padding: 10px 15px;          /* Espaçamento interno do botão */
+    border: none;                /* Remove a borda padrão */
+    border-radius: 4px;          /* Arredonda os cantos do botão */
+    cursor: pointer;             /* Mostra o cursor de "mãozinha" ao passar o mouse */
+}
+
+button:hover {
+    background-color: #218838; /* Escurece o botão quando o mouse passa por cima */
+}
